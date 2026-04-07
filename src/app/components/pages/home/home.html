@@ -1,0 +1,46 @@
+<app-menu-bar></app-menu-bar>
+
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="badge">GERESA LL-ESSR</div>
+    <h1>Sub Gerencia de<br><span>Regulación Sectorial</span></h1>
+    <p>SISTEMA DE RESUMEN ESTADÍSTICO DE INSPECCIONES</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="sections-grid">
+    <div *ngFor="let section of sections" 
+         class="card-wrapper" 
+         [style.--card-color]="section.color">
+      <p-card class="custom-card">
+        <ng-template pTemplate="header">
+          <div class="card-icon" [style.background]="section.color + '20'">
+            <i [class]="'pi ' + section.icon" [style.color]="section.color"></i>
+          </div>
+        </ng-template>
+        
+        <ng-template pTemplate="title">
+          <h2>{{ section.title }}</h2>
+        </ng-template>
+        
+        <ng-template pTemplate="subtitle">
+          <p class="subtitle">{{ section.subtitle }}</p>
+        </ng-template>
+        
+        <p class="description">{{ section.description }}</p>
+        
+        <ng-template pTemplate="footer">
+          <p-button 
+            label="Ingresar" 
+            [routerLink]="section.route"
+            [style]="{'background': section.color, 'border': 'none', 'color': section.textColor || '#fff'}">
+          </p-button>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

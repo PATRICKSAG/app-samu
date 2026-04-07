@@ -1,0 +1,17 @@
+<p-menubar [model]="items" class="custom-menubar" [style]="getMenuStyle()">
+  <ng-template pTemplate="start">
+    <div class="logo-container">
+      <i class="pi pi-shield logo-icon"></i>
+      <div class="logo-text">
+        <span class="title">GERESA LL-ESSR</span>
+        <span class="subtitle">Sub Gerencia de Regulación Sectorial</span>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div class="header-right">
+      <i class="pi pi-calendar"></i>
+      <span>{{ currentYear }}</span>
+    </div>
+  </ng-template>
+</p-menubar>

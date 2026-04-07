@@ -1,0 +1,30 @@
+<app-menu-bar [sectionColor]="sectionColor"></app-menu-bar>
+
+<div class="page-container">
+  <div class="page-header" [style.background]="sectionColor">
+    <div class="page-header-content">
+      <i [class]="'pi ' + icon" class="page-icon"></i>
+      <h1>{{ title }}</h1>
+      <p>{{ description }}</p>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="content-card">
+      <h2>Documentación</h2>
+      <p>
+        Acceso a documentos y formatos mediante Google Drive.
+      </p>
+
+      <a href="#" target="_blank">
+        <div class="info-grid">
+          <div class="info-item">
+            <i class="pi pi-file"></i>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
