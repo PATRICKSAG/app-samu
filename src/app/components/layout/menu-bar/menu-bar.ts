@@ -92,7 +92,7 @@ export class MenuBarComponent implements OnInit {
 
   adjustColor(color: string, percent: number): string {
     // Función simple para oscurecer/clarificar colores
-    // En producción, considera usar una librería como 'color'
+    // En producción, considerar usar una librería como 'color'
     return color;
   }
 }
