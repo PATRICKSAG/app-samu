@@ -2,16 +2,16 @@
   border: none;
   border-radius: 0;
   padding: 0.5rem 2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-md);
   transition: background 0.3s ease;
 
   ::ng-deep {
     .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
-      color: white !important;
+      color: var(--text-inverse) !important;
       font-weight: 500;
       
       .p-menuitem-icon, .p-menuitem-text {
-        color: white !important;
+        color: var(--text-inverse) !important;
       }
       
       &:hover {
@@ -21,25 +21,25 @@
     }
 
     .p-submenu-list {
-      background: white;
+      background: var(--card-bg);
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      box-shadow: var(--shadow-lg);
       
       .p-menuitem-link {
-        color: #2c3e50 !important;
+        color: var(--text-primary) !important;
         
         .p-menuitem-icon, .p-menuitem-text {
-          color: #2c3e50 !important;
+          color: var(--text-primary) !important;
         }
         
         &:hover {
-          background: #e8f4f8 !important;
+          background: var(--bg-secondary) !important;
         }
       }
     }
 
     .p-menubar-button {
-      color: white !important;
+      color: var(--text-inverse) !important;
     }
   }
 
@@ -47,7 +47,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: white;
+    color: var(--text-inverse);
     
     .logo-icon {
       font-size: 1.8rem;
@@ -71,15 +71,30 @@
     }
   }
 
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .header-right {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: white;
+    color: var(--text-inverse);
     font-size: 0.9rem;
     background: rgba(255,255,255,0.15);
     padding: 0.5rem 1rem;
     border-radius: 50px;
+  }
+}
+
+// Modo oscuro específico para menubar
+:host-context(.dark-theme) {
+  .custom-menubar {
+    ::ng-deep .p-submenu-list {
+      border: 1px solid var(--border-color);
+    }
   }
 }
 
@@ -90,5 +105,35 @@
     .logo-text .subtitle {
       display: none;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-menubar {
+    padding: 0.5rem 1rem;
+    
+    .logo-text .subtitle {
+      display: none;
+    }
+    
+    .header-right span {
+      display: none;
+    }
+    
+    .header-right {
+      padding: 0.5rem;
+    }
+  }
+}
+
+// Botón de menú hamburguesa personalizado
+::ng-deep .p-menubar-button {
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  transition: all 0.3s;
+  
+  &:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
   }
 }

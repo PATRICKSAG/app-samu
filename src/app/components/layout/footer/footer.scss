@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(135deg, #1a2a3a 0%, #0f1a24 100%);
-  color: white;
+  background: var(--footer-bg);
+  color: var(--text-inverse);
   margin-top: 4rem;
 
   .footer-content {
@@ -14,7 +14,7 @@
 
   .footer-section {
     h4 {
-      color: #e8a735;
+      color: var(--accent);
       margin-bottom: 1rem;
       font-size: 1.1rem;
       position: relative;
@@ -27,7 +27,7 @@
         left: 0;
         width: 30px;
         height: 2px;
-        background: #e8a735;
+        background: var(--accent);
       }
     }
 
@@ -42,7 +42,7 @@
         gap: 0.5rem;
         
         i {
-          color: #e8a735;
+          color: var(--accent);
           font-size: 0.9rem;
         }
 
@@ -52,7 +52,7 @@
           transition: color 0.3s;
           
           &:hover {
-            color: #e8a735;
+            color: var(--accent);
           }
         }
       }
@@ -67,7 +67,7 @@
     
     i {
       font-size: 2rem;
-      color: #e8a735;
+      color: var(--accent);
     }
     
     span {
@@ -97,13 +97,17 @@
       transition: all 0.3s;
       
       i {
-        color: white;
+        color: var(--text-inverse);
         font-size: 1rem;
       }
       
       &:hover {
-        background: #e8a735;
+        background: var(--accent);
         transform: translateY(-3px);
+        
+        i {
+          color: var(--text-inverse);
+        }
       }
     }
   }

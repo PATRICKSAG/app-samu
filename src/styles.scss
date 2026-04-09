@@ -1,5 +1,6 @@
 @import "primeicons/primeicons.css";
 
+// Variables Sass (para uso en componentes)
 $primary: #1a5f7a;    // Azul salud/confianza
 $secondary: #2c8c6e;  // Verde natural
 $accent: #e8a735;     // Dorado suave (toque profesional)
@@ -8,14 +9,137 @@ $light-bg: #f8f9fc;   // Fondo claro
 $text-dark: #2c3e50;  // Texto principal
 $text-gray: #6c757d;  // Texto secundario
 
+// Variables globales CSS
+:root {
+  --transition-speed: 0.3s;
+}
+
+// ========== MODO CLARO (por defecto) ==========
+.light-theme {
+  // Colores principales
+  --primary: #1a5f7a;
+  --primary-dark: #1a4f6e;
+  --secondary: #2c8c6e;
+  --accent: #e8a735;
+  --danger: #c94f4f;
+  
+  // Fondos
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fc;
+  --bg-tertiary: #f1f3f5;
+  --bg-gradient-start: #f5f7fa;
+  --bg-gradient-end: #e9ecef;
+  
+  // Textos
+  --text-primary: #2c3e50;
+  --text-secondary: #6c757d;
+  --text-tertiary: #95a5a6;
+  --text-inverse: #ffffff;
+  
+  // Bordes
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  
+  // Sombras
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  // Cards
+  --card-bg: #ffffff;
+  --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  
+  // Inputs
+  --input-bg: #ffffff;
+  --input-border: #cbd5e1;
+  --input-focus: #1a5f7a;
+  
+  // Footer
+  --footer-bg: linear-gradient(135deg, #1a2a3a 0%, #0f1a24 100%);
+}
+
+// ========== MODO OSCURO ==========
+.dark-theme {
+  // Colores principales (ajustados para oscuro)
+  --primary: #2c8c6e;
+  --primary-dark: #1a5f7a;
+  --secondary: #3b9b7a;
+  --accent: #f0b84d;
+  --danger: #e07474;
+  
+  // Fondos
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --bg-tertiary: #374151;
+  --bg-gradient-start: #1a202c;
+  --bg-gradient-end: #0f172a;
+  
+  // Textos
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --text-tertiary: #718096;
+  --text-inverse: #1a202c;
+  
+  // Bordes
+  --border-color: #2d3748;
+  --border-hover: #4a5568;
+  
+  // Sombras (más sutiles en oscuro)
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+  
+  // Cards
+  --card-bg: #2d3748;
+  --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  
+  // Inputs
+  --input-bg: #2d3748;
+  --input-border: #4a5568;
+  --input-focus: #2c8c6e;
+  
+  // Footer
+  --footer-bg: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+}
+
+// Aplicar variables globales
+* {
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
-  color: $text-dark;
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
 }
-// Animaciones globales de entrada
+
+// Clases de utilidad
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-accent { color: var(--accent); }
+.bg-primary { background: var(--primary); }
+.bg-secondary { background: var(--secondary); }
+
+// Animaciones globales
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeInScale {
   from {
     opacity: 0;
@@ -50,6 +174,10 @@ body {
 }
 
 // Clases de utilidad para animaciones
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
 .animate-fade-in-scale {
   animation: fadeInScale 0.6s ease-out;
 }
@@ -60,4 +188,8 @@ body {
 
 .animate-slide-right {
   animation: slideInRight 0.6s ease-out;
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out;
 }

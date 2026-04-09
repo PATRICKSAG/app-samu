@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
+import { ThemeToggleComponent } from "../theme-toggle/theme-toggle";
 
 @Component({
   selector: 'app-menu-bar',
   standalone: true,
-  imports: [CommonModule, RouterModule, MenubarModule],
+  imports: [CommonModule, RouterModule, MenubarModule, ThemeToggleComponent],
   templateUrl: './menu-bar.html',
   styleUrl: './menu-bar.scss',
 })

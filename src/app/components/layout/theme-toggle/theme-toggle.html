@@ -1,0 +1,12 @@
+<button class="theme-toggle" (click)="toggleTheme()" [class.dark]="isDarkMode">
+  <div class="toggle-track">
+    <div class="toggle-thumb">
+      @if (!isDarkMode) {
+        <i class="pi pi-sun"></i>
+      } @else {
+        <i class="pi pi-moon"></i>
+      }
+    </div>
+  </div>
+  <span class="toggle-label">{{ isDarkMode ? 'Modo Oscuro' : 'Modo Claro' }}</span>
+</button>

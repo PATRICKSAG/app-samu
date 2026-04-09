@@ -9,9 +9,12 @@
     </div>
   </ng-template>
   <ng-template pTemplate="end">
-    <div class="header-right">
-      <i class="pi pi-calendar"></i>
-      <span>{{ currentYear }}</span>
+    <div class="header-controls">
+      <app-theme-toggle></app-theme-toggle>
+      <div class="header-right">
+        <i class="pi pi-calendar"></i>
+        <span>{{ currentYear }}</span>
+      </div>
     </div>
   </ng-template>
 </p-menubar>

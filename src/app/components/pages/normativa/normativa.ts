@@ -7,7 +7,7 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
 @Component({
   selector: 'app-normativa',
   standalone: true,
-  imports: [CommonModule, MenuBarComponent, Footer, RouterLink, RouterLinkActive],
+  imports: [CommonModule, MenuBarComponent, Footer],
   templateUrl: './normativa.html',
   styleUrl: './normativa.scss',
 })

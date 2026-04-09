@@ -3,8 +3,13 @@
 <div class="hero-section">
   <div class="hero-content">
     <div class="badge">GERESA LL-ESSR</div>
-    <h1>Sub Gerencia de<br><span>Regulación Sectorial</span></h1>
-    <p>SISTEMA DE RESUMEN ESTADÍSTICO DE INSPECCIONES</p>
+    <h1>
+      <div class="typing-container">
+        <span class="typing-text">Sub Gerencia de Regulación Sectorial</span>
+        <span class="cursor-blink">|</span>
+      </div>
+    </h1>
+    <p>Garantizando la calidad, seguridad y eficacia en los servicios de salud para la región</p>
   </div>
 </div>
 
@@ -34,7 +39,7 @@
           <p-button 
             label="Ingresar" 
             [routerLink]="section.route"
-            [style]="{'background': section.color, 'border': 'none', 'color': section.textColor || '#fff'}">
+            [style]="{'background': section.color, 'border': 'none', 'color': 'white'}">
           </p-button>
         </ng-template>
       </p-card>
@@ -43,4 +48,3 @@
 </div>
 
 <app-footer></app-footer>
-
