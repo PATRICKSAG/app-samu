@@ -76,16 +76,16 @@
   }
 }
 
-// Modo claro - texto oscuro
+// Modo claro 
 :host-context(.light-theme) {
   .toggle-label {
-    color: var(--text-primary);
+    color: #ffffff;
   }
 }
 
-// Modo oscuro - texto claro
+// Modo oscuro - texto 
 :host-context(.dark-theme) {
   .toggle-label {
-    color: var(--text-inverse);
+    color: #a3a4a4;
   }
 }

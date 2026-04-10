@@ -50,6 +50,7 @@
     color: var(--text-inverse);
     
     .logo-icon {
+      color: white;
       font-size: 1.8rem;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
     }
@@ -57,7 +58,7 @@
     .logo-text {
       display: flex;
       flex-direction: column;
-      
+      color: white;
       .title {
         font-weight: 700;
         font-size: 1.1rem;
