@@ -13,3 +13,8 @@
     margin: 0;
   }
 }
+::ng-deep .custom-menubar .p-menuitem-icon {
+  // font-size: 1.3rem !important;  // Ajusta a tu gusto
+  width: auto;
+  margin-right: 0.5rem;
+}

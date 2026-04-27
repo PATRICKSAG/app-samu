@@ -1,9 +1,18 @@
-.page-container {
-  min-height: 100vh;
+.content-card {
+  padding: 2rem;
+  overflow: hidden;  
   display: flex;
   flex-direction: column;
+  
+  app-power-bi-report {
+    flex: 1; 
+    display: block;
+    min-height: 600px;
+  }
 }
-
+fa-icon {
+  font-size: xx-large;
+}
 .page-header {
   padding: 4rem 2rem;
   text-align: center;

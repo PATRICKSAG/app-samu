@@ -4,11 +4,12 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 import { ThemeToggleComponent } from "../theme-toggle/theme-toggle";
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faHeart, faDesktop, faLeaf, faFilePdf, faSyringe,faBuilding } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-menu-bar',
   standalone: true,
-  imports: [CommonModule, RouterModule, MenubarModule, ThemeToggleComponent],
+  imports: [CommonModule, RouterModule, MenubarModule, ThemeToggleComponent, FontAwesomeModule],
   templateUrl: './menu-bar.html',
   styleUrl: './menu-bar.scss',
 })
@@ -19,6 +20,12 @@ export class MenuBarComponent implements OnInit {
   currentRoute: string = '';
   currentYear = new Date().getFullYear();
 
+  faSyringe = faSyringe;
+  faHeart = faHeart;
+  faDesktop = faDesktop;
+  faLeaf = faLeaf;
+  faFilePdf = faFilePdf;
+  faBuilding = faBuilding;
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -32,40 +39,40 @@ export class MenuBarComponent implements OnInit {
     this.initializeMenuItems();
   }
 
-  initializeMenuItems() {
+ initializeMenuItems() {
     this.items = [
       {
         label: 'Inicio',
-        icon: 'pi pi-home',
+        icon: 'fas fa-home',
         routerLink: '/'
       },
       {
         label: 'Unidades Técnicas',
-        icon: 'pi pi-building',
+        icon: 'fas fa-institution',
         items: [
           {
             label: 'UFREMID',
             sublabel: 'Medicamentos, Insumos y Drogas',
-            icon: 'pi pi-heart',
+            icon: 'fas fa-syringe',
             routerLink: '/ufremid'
           },
           {
             label: 'UFRESBIT',
             sublabel: 'Servicios y Tecnología',
-            icon: 'pi pi-desktop',
+            icon: 'fas fa-building',
             routerLink: '/ufresbit'
           },
           {
             label: 'UFRESA',
             sublabel: 'Salud Ambiental',
-            icon: 'pi pi-verified',
+            icon: 'fas fa-leaf',
             routerLink: '/ufresa'
           }
         ]
       },
       {
         label: 'Normativa',
-        icon: 'pi pi-file-pdf',
+        icon: 'fas fa-file-pdf',
         routerLink: '/normativa'
       }
     ];

@@ -1,23 +1,16 @@
 <app-menu-bar [sectionColor]="sectionColor"></app-menu-bar>
 
 <div class="page-container">
-  <div class="page-header" [style.background]="sectionColor">
+  <div class="page-header" [ngStyle]="getHeaderStyle()">
     <div class="page-header-content">
-      <i [class]="'pi ' + icon" class="page-icon"></i>
+      <fa-icon [icon]="faBuilding"></fa-icon>
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
     </div>
   </div>
 
   <div class="page-content">
-    <div class="content-card">
-      <h2>Información General</h2>
-      <p>Contenido en desarrollo para {{ title }}. Aquí se mostrará la información específica de esta unidad funcional.</p>
-      
-      <div class="info-grid">
-        
-      </div>
-    </div>
+    <app-power-bi-report [areaOrigen]="areaOrigen"></app-power-bi-report>
   </div>
 </div>
 

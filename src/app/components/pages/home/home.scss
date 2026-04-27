@@ -128,7 +128,9 @@
     opacity: 0; 
   }
 }
-
+fa-icon {
+  font-size: xx-large;
+}
 // ========== BOTONES CON TEXTO BLANCO ==========
 .custom-card {
   background: var(--card-bg);
@@ -137,11 +139,14 @@
   box-shadow: var(--shadow-lg);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   position: relative;
-
+i{
+  font-size: x-large;
+}
   &::before {
     content: '';
     position: absolute;

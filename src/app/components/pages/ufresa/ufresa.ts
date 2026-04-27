@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuBarComponent } from '../../layout/menu-bar/menu-bar';
 import {Footer} from '../../layout/footer/footer';
+import { PowerBiReport } from '../power-bi-report/power-bi-report';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faHeart, faDesktop, faLeaf, faFilePdf, faSyringe } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-ufresa',
   standalone: true,
-  imports: [CommonModule, MenuBarComponent, Footer],
+  imports: [CommonModule, MenuBarComponent, Footer, PowerBiReport, FontAwesomeModule],
   templateUrl: './ufresa.html',
   styleUrl: './ufresa.scss',
 })
@@ -15,6 +18,23 @@ export class Ufresa {
   description = 'Unidad Funcional de Regulación Salud Ambiental';
   icon = 'pi-verified';
   sectionColor = '#e8a735';
+  areaOrigen = 'UFRESA';
+  faSyringe = faSyringe;
+  faHeart = faHeart
+  faDesktop = faDesktop;
+  faLeaf = faLeaf;
+  faFilePdf = faFilePdf;
+
+  wallpaperUrl = 'https://i.postimg.cc/zGMfT0Rq/Gemini-Generated-Image-ajekfkajekfkajek.png';
+  
+getHeaderStyle() {
+  return {
+    background: `linear-gradient(135deg, ${this.sectionColor}CC, ${this.sectionColor}CC), url('${this.wallpaperUrl}')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    // backgroundBlendMode: 'overlay'   // o 'soft-light'
+  };
+}
 
   features = [
     {

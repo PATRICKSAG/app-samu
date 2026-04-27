@@ -3,7 +3,7 @@
 <div class="page-container">
   <div class="page-header" [style.background]="sectionColor">
     <div class="page-header-content">
-      <i [class]="'pi ' + icon" class="page-icon"></i>
+            <fa-icon [icon]="getIconForSection()" style="font-size: xxx-large;"></fa-icon>
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
     </div>
@@ -19,7 +19,7 @@
       <a href="#" target="_blank">
         <div class="info-grid">
           <div class="info-item">
-            <i class="pi pi-file"></i>
+            <fa-icon [icon]="faFilePdf"></fa-icon>
           </div>
         </div>
       </a>
