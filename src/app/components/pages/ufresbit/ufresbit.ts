@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuBarComponent } from '../../layout/menu-bar/menu-bar';
 import {Footer} from '../../layout/footer/footer';
-import { PowerBiReport } from '../power-bi-report/power-bi-report';
+import { PowerBiReportComponent } from '../power-bi-report/power-bi-report';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart, faDesktop, faLeaf, faFilePdf, faSyringe,faBuilding } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-ufresbit',
   standalone: true,
-  imports: [CommonModule, MenuBarComponent, Footer, PowerBiReport, FontAwesomeModule],
+  imports: [CommonModule, MenuBarComponent, Footer, FontAwesomeModule, PowerBiReportComponent],
   templateUrl: './ufresbit.html',
   styleUrl: './ufresbit.scss',
 })
@@ -25,7 +25,7 @@ export class Ufresbit {
   faLeaf = faLeaf;
   faFilePdf = faFilePdf;
   faBuilding = faBuilding;
-
+  powerBiUrl = '';
   wallpaperUrl = 'https://i.postimg.cc/HLykzXQn/Gemini-Generated-Image-cqq68hcqq68hcqq6.png';
   
 getHeaderStyle() {

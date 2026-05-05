@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuBarComponent } from '../../layout/menu-bar/menu-bar';
 import {Footer} from '../../layout/footer/footer';
-import { PowerBiReport } from '../power-bi-report/power-bi-report';
+// import { PowerBiReport } from '../power-bi-report/power-bi-report';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart, faDesktop, faLeaf, faFilePdf, faSyringe } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { PowerBiReportComponent } from "../power-bi-report/power-bi-report";
 
 library.add(faHeart, faDesktop, faLeaf, faFilePdf, faSyringe);
 @Component({
   selector: 'app-ufremid',
   standalone: true,
-  imports: [CommonModule, MenuBarComponent, Footer, PowerBiReport, FontAwesomeModule],
+  imports: [CommonModule, MenuBarComponent, Footer, FontAwesomeModule, PowerBiReportComponent],
   templateUrl: './ufremid.html',
   styleUrl: './ufremid.scss',
 })
@@ -23,7 +24,7 @@ export class Ufremid {
   sectionColor = '#1a5f7a';
   headerColor = '#1a5f7a';
   areaOrigen = 'UFREMID';
-
+  powerBiUrl = 'https://app.powerbi.com/view?r=eyJrIjoiZjBmZjllNzYtMDI2ZS00YmFiLWE2MjUtMWJmYWE5MjhlNzkzIiwidCI6ImRjNDFhYWZkLWFkNjgtNGZiZC1hOTE5LWJmM2NjYjhjNTEyMSJ9';
   wallpaperUrl = 'https://i.postimg.cc/fb9RCmxb/Gemini-Generated-Image-z0yo1iz0yo1iz0yo.png';
   
 getHeaderStyle() {
