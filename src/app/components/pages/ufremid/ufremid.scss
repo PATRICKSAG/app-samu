@@ -10,6 +10,43 @@
     min-height: 600px;
   }
 }
+.legend {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.legend h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.5rem 1rem;
+}
+
+.legend-item {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.code {
+  display: inline-block;
+  font-weight: bold;
+  font-family: monospace;
+  background-color: #e9ecef;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  color: #0056b3;
+}
 fa-icon {
   font-size: xx-large;
 }

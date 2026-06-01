@@ -3,14 +3,29 @@
 <div class="page-container">
   <div class="page-header" [ngStyle]="getHeaderStyle()">
     <div class="page-header-content">
-            <fa-icon [icon]="getIconForSection()"></fa-icon>
+      <fa-icon [icon]="getIconForSection()"></fa-icon>
       <h1>{{ title }}</h1>
       <p>{{ description }}</p>
     </div>
   </div>
 
   <div class="page-content">
-          <app-power-bi-report [reportUrl]="powerBiUrl"></app-power-bi-report>
+    <app-power-bi-report [reportUrl]="powerBiUrl"></app-power-bi-report>
+
+    <!-- Leyenda debajo del reporte -->
+    <div class="legend">
+      <h3>Leyenda de indicadores</h3>
+      <div class="legend-items">
+        <div class="legend-item"><span class="code">I</span> Inspecciones reglamentarias en boticas, farmacias</div>
+        <div class="legend-item"><span class="code">V</span> Inspección por verificación - operativos propios y conjuntos</div>
+        <div class="legend-item"><span class="code">IVP</span> Inspección verificación de precios</div>
+        <div class="legend-item"><span class="code">BPA</span> Buenas prácticas de almacenamiento en droguerías, Alm. especializados</div>
+        <div class="legend-item"><span class="code">BPDT</span> Buenas prácticas de distribución y transporte</div>
+        <div class="legend-item"><span class="code">PROA</span> Antimicrobianos</div>
+        <div class="legend-item"><span class="code">LG</span> Ley de genéricos</div>
+        <div class="legend-item"><span class="code">FARES</span> Farmacia de Establecimiento de Salud</div>
+      </div>
+    </div>
   </div>
 </div>
 
