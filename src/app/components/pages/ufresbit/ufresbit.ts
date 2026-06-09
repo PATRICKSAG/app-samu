@@ -25,7 +25,7 @@ export class Ufresbit {
   faLeaf = faLeaf;
   faFilePdf = faFilePdf;
   faBuilding = faBuilding;
-  powerBiUrl = '';
+  powerBiUrl = 'https://app.powerbi.com/view?r=eyJrIjoiNmUwMWIxODItNmY2Ni00ZjFkLTkxMDYtOGJjYThhZjQyOGE3IiwidCI6ImRjNDFhYWZkLWFkNjgtNGZiZC1hOTE5LWJmM2NjYjhjNTEyMSJ9';
   wallpaperUrl = 'https://i.postimg.cc/HLykzXQn/Gemini-Generated-Image-cqq68hcqq68hcqq6.png';
   
 getHeaderStyle() {
